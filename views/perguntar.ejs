@@ -1,0 +1,25 @@
+<%- include('partials/header') -%>
+<!-- App css -->
+<link rel="stylesheet" href="/css/perguntar.css">
+<%- include('partials/navbar') -%>
+<div class="container">
+    <form method="post" action="perguntar">
+        <div class="card mt-5">
+            <div class="card-header">
+                <h3>Realizar Pergunta</h3>
+            </div>
+            <div class="card-body">
+                <label for="">Título</label>
+                <input type="text" class="form-control" name="titulo" id="" placeholder="Título">
+                <br>
+                <label for="">Descrição</label>
+                <textarea type="text" class="form-control" name="descricao" id=""
+                    placeholder="Descreva sua pergunta aqui"></textarea>
+            </div>
+            <div class="card-footer">
+                <button type="submit" class="btn btn-success">Perguntar</button>
+            </div>
+        </div>
+    </form>
+</div>
+<%- include('partials/footer') -%>

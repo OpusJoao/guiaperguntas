@@ -1,0 +1,25 @@
+<%- include('partials/header') -%>
+<!-- App css -->
+<link rel="stylesheet" href="/css/perguntar.css">
+<%- include('partials/navbar') -%>
+<div class="container">
+    <hr>
+    <h1>Perguntas</h1>
+    <a href="/perguntar" class="btn btn-primary"> Perguntar </a>
+    <hr>
+    
+    <% perguntas.forEach( pergunta => { %>
+        <div class="card mt-3">
+            <div class="card-header">
+                <h3><%= pergunta.titulo %></h3>
+            </div>
+            <div class="card-body">
+                <p><%= pergunta.descricao %></p>
+            </div>
+            <div class="card-footer">
+                <a href="/pergunta/<%= pergunta.id %>" class="btn btn-primary">Responder</a>
+            </div>
+        </div>  
+    <% }) %>
+</div>
+<%- include('partials/footer') -%>
